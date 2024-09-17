@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App | Malik Muhammad Umair</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <h1>ToDo App By Malik Muhammad Umair</h1>
+
+
+
+    <div class="alert" id="alert">
+      <i class="fa-solid fa-exclamation"></i>
+      <h1>Alert</h1>
+      <p style="margin-bottom: 10px;">Activity Cannot Be Empty</p>
+      <button class="alertBtn" onclick="removeAlert()">OK</button>
+    </div>
+
+
+    <div class="prompt" id="prompt">
+      <h1>Enter Your Activity</h1>
+      <input type="text" name="text" id="promptInput" placeholder="Enter Your Activity" />
+     <div> 
+      <button class="saveBtn btn">Save</button>
+      <button class="cancelBtn btn" onclick="hidePrompt()">Cancel</button>
+    </div>
+
+    </div>
+
+    <div class="border">
+      <div class="lines"></div>
+        <div class="todoApp">
+            <h1>Add Your Activities</h1>
+            <input
+              type="text"
+              name="text"
+              id="input"
+              placeholder="Enter Activity to Add!"
+            />
+            <button class="btn" id="btn" onclick="addActivity()">Add Activity</button>
+            <ul class="comingList" id="comingList"></ul>
+          </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

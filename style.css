@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 3rem;
+    background-color: #212A46;
+}
+
+.border{
+    padding: 1px;
+    margin-top: 1.6rem;
+    border-radius: 12px;
+    animation: animate infinite 1s linear;
+}
+
+.todoApp {
+    backdrop-filter: blur(4px) saturate(200%);
+    -webkit-backdrop-filter: blur(14px) saturate(200%);
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 10px 10px 20px black;
+}
+
+.prompt{
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 25%;
+    z-index: 9999;
+    display: none;
+}
+
+.promptActive{
+    display: block;
+}
+.prompt h1{
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+    margin-bottom: 15px;
+}
+
+.prompt input{
+    padding: 10px 20px;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.prompt input:focus{
+    border-color: yellowgreen;
+}
+
+.prompt .saveBtn{
+    background: green;
+    padding: 10px 50px ;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+
+}
+
+.prompt .cancelBtn{
+    background: red;
+    padding: 10px 40px ;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+
+h1{
+    font-weight: 600;
+    color: whitesmoke;
+}
+
+.btn{
+    background: linear-gradient(45deg, yellow, yellowgreen);
+    padding: 10px 20px ;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+input[type="text"] {
+    padding: 10px 20px;
+    border: 1.5px solid black;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+.todoApp h1{
+    margin-bottom: 1rem;
+}
+
+.btn:active{
+    transform: scale(.9);
+}
+
+.todoApp .comingList{
+    margin: 2rem .3rem;
+    text-decoration: none;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.comingListItem{
+    padding: 5px;
+    border-bottom: 1.5px solid whitesmoke;
+    border-radius: 3px;
+    font-size: 23px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: .3rem;
+}
+
+.comingListItem:hover{
+    border-bottom: 1.5px solid yellow;
+}
+
+.remove-btn{
+    font-size: 13px;
+    padding: 8px 13px;
+}
+
+#input:focus{
+    border: 1px solid yellowgreen;
+}
+
+.buttons{
+    padding: 0;
+}
+
+.fa-solid{
+    padding-right: 10px;
+    position: relative;
+    top: .3rem;
+}
+
+.fa-solid:hover{
+    color: yellowgreen;
+}
+
+.alert{
+    font-size: 20px;
+    padding: 40px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 1rem 0;
+    border: 1px solid rebeccapurple;
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    z-index: 99999999;
+    visibility: hidden;
+    border-radius: 10px;
+}
+.alert i{
+    font-size: 100px;
+    color: red;
+    position: relative;
+   border-radius: 50%;
+   margin-bottom: 30px;
+   border: 3px solid red;
+   padding: 15px 50px;
+}
+.alert h1{
+    font-size: 35px;
+    color: red;
+    margin-bottom: 10px;
+}
+
+.alert .alertBtn{
+    padding: 10px 80px;
+    font-size: 20px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.alertActive{
+visibility: visible;
+}
+
+
+
+
+
+
+@keyframes animate {
+    0%{
+        background: linear-gradient(0deg, yellow, yellowgreen, violet);
+    }
+    50%{
+        background: linear-gradient(180deg, yellow, yellowgreen, violet);
+    }
+    100%{
+        background: linear-gradient(360deg, yellow, yellowgreen, violet);
+    }
+}
+
+
+
+
